@@ -7,6 +7,7 @@ import { View, TouchableOpacity } from "react-native";
 // Screens
 import Home from "../../screens/Home";
 import Register from "../../screens/Register";
+import Graphic from "../../screens/Graphic";
 
 // Models
 import { propsNavigationStackMain } from "./models";
@@ -65,6 +66,11 @@ export default function MyStack() {
         name="Register"
         component={Register}
         options={{ title: "Registrar" }}
+      />
+      <Stack.Screen
+        name="Graphic"
+        component={Graphic}
+        options={{ title: "Gráfico" }}
       />
     </Stack.Navigator>
   );

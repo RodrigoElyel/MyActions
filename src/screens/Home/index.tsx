@@ -166,6 +166,21 @@ const HomeScreen = () => {
           onPress={() => {
             navigation.navigate("Register");
           }}
+          style={{ width: "40%" }}
+        />
+        <Button
+          label="Gráfico"
+          onPress={() => {
+            if (actionsData.length > 0) {
+              navigation.navigate("Graphic");
+            } else {
+              Alert.alert(
+                "Atenção",
+                "Você ainda não possui nenhuma ação para ser visualizada em forma de gráfico!"
+              );
+            }
+          }}
+          style={{ width: "40%" }}
         />
       </S.BottomSide>
     </Screen>

@@ -6,8 +6,7 @@ export const TopSide = styled.View`
 
 export const BottomSide = styled.View`
   height: 15%;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 `;
 
