@@ -13,5 +13,5 @@ export const ContainerButton = styled.TouchableOpacity`
   align-items: center;
   border-radius: 8px;
   background-color: ${({ disabled, loading }: IButtonProps) =>
-    disabled && !loading ? STYLES.COLORS.disabled : STYLES.COLORS.secondary};
+    disabled && !loading ? STYLES.COLORS.disabled : STYLES.COLORS.primary};
 `;

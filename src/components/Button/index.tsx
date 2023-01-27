@@ -39,12 +39,12 @@ const Button = ({
       <Text
         bold
         size={STYLES.SIZES.medium}
-        color={labelColor ? labelColor : STYLES.COLORS.white}
+        color={labelColor ? labelColor : STYLES.COLORS.black}
       >
         {loading ? (
           <ActivityIndicator
             size={STYLES.SIZES.medium}
-            color={STYLES.COLORS.white}
+            color={STYLES.COLORS.black}
           />
         ) : (
           label

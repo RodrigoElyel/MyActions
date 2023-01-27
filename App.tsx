@@ -1,6 +1,9 @@
 import Routes from "./src/routes";
 import FlashMessage from "react-native-flash-message";
 
+// Context
+import { ActionsContextProvider } from "./src/context/ActionsContext";
+
 // Fonts
 import {
   useFonts,
@@ -23,9 +26,9 @@ export default function App() {
   }
 
   return (
-    <>
+    <ActionsContextProvider>
       <Routes />
       <FlashMessage position="top" />
-    </>
+    </ActionsContextProvider>
   );
 }

@@ -14,7 +14,7 @@ export const AlertFlashMessage = (type: MessageType, description: string) => {
   };
   showMessage({
     message: message(type),
-    description: "description",
+    description: description,
     type: type,
     statusBarHeight: StatusBar.currentHeight,
     floating: true,

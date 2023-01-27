@@ -10,7 +10,7 @@ export interface IInputProps {
 
 export const Container = styled.View`
   flex-direction: column;
-  width: 300px;
+  width: 90%;
   height: 75px;
 `;
 
