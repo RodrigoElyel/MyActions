@@ -3,16 +3,7 @@ import React from "react";
 
 import { showMessage, MessageType } from "react-native-flash-message";
 
-type IAlertComponent = {
-  type: MessageType;
-  description: string;
-};
-
-export const AlertFlashMessage = ({
-  type = "info",
-  description,
-}: IAlertComponent) => {
-
+export const AlertFlashMessage = (type: MessageType, description: string) => {
   const message = (type: MessageType) => {
     if (type === "success") return "Sucesso";
     if (type === "danger") return "Erro";
@@ -23,7 +14,7 @@ export const AlertFlashMessage = ({
   };
   showMessage({
     message: message(type),
-    description: description,
+    description: "description",
     type: type,
     statusBarHeight: StatusBar.currentHeight,
     floating: true,
