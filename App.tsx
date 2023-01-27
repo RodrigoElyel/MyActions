@@ -1,20 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import Routes from "./src/routes";
+import FlashMessage from "react-native-flash-message";
+
+// Fonts
+import {
+  useFonts,
+  Urbanist_400Regular,
+  Urbanist_400Regular_Italic,
+  Urbanist_700Bold,
+  Urbanist_300Light,
+} from "@expo-google-fonts/urbanist";
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    Urbanist_400Regular,
+    Urbanist_400Regular_Italic,
+    Urbanist_700Bold,
+    Urbanist_300Light,
+  });
+
+  if (!fontsLoaded) {
+    return <></>;
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <Routes />
+      <FlashMessage position="top" />
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
